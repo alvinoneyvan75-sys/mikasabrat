@@ -1,0 +1,14 @@
+{
+  "name": "brat-mikasa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "made by VinorajaIblizss",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.67",
+    "express": "^4.21.2"
+  }
+}
