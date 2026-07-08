@@ -58,7 +58,7 @@ app.get("/maker/mikasabrat", async (req, res) => {
     ctx.drawImage(image, 0, 0);
 
     const maxWidth = image.width * 0.45;
-    const rotasi = 6 * Math.PI / 180;
+    const rotasi = 0 * Math.PI / 180;
 
     // Skala font mengikuti ukuran asli gambar (referensi 800px)
     const scale = image.width / 800;
