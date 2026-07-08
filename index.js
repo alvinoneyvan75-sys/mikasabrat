@@ -60,23 +60,27 @@ app.get("/maker/mikasabrat", async (req, res) => {
     const maxWidth = image.width * 0.45;
     const rotasi = 6 * Math.PI / 180;
 
+    // Skala font mengikuti ukuran asli gambar (referensi 800px)
+    const scale = image.width / 800;
+
     ctx.fillStyle = "#000";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.font = "bold 45px CustomFont";
+
+    let fontSize = Math.round(45 * scale);
+    let lineHeight = Math.round(55 * scale);
+    ctx.font = `bold ${fontSize}px CustomFont`;
 
     let lines = wrapText(ctx, text, maxWidth);
-    let fontSize = 45;
-    let lineHeight = 55;
 
     if (lines.length > 4) {
-      fontSize = 28;
-      lineHeight = 38;
+      fontSize = Math.round(28 * scale);
+      lineHeight = Math.round(38 * scale);
       ctx.font = `bold ${fontSize}px CustomFont`;
       lines = wrapText(ctx, text, maxWidth);
     } else if (lines.length > 2) {
-      fontSize = 35;
-      lineHeight = 45;
+      fontSize = Math.round(35 * scale);
+      lineHeight = Math.round(45 * scale);
       ctx.font = `bold ${fontSize}px CustomFont`;
       lines = wrapText(ctx, text, maxWidth);
     }
