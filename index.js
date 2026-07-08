@@ -58,10 +58,10 @@ app.get("/maker/mikasabrat", async (req, res) => {
     ctx.drawImage(image, 0, 0);
 
     const maxWidth = image.width * 0.45;
-    const rotasi = 0 * Math.PI / 180;
+    const rotasi = 6 * Math.PI / 180;
 
-    // Skala font mengikuti ukuran asli gambar (referensi 800px)
-    const scale = image.width / 800;
+    // Skala font mengikuti ukuran asli gambar (referensi 1000px)
+    const scale = image.width / 1000;
 
     ctx.fillStyle = "#000";
     ctx.textAlign = "center";
@@ -85,7 +85,7 @@ app.get("/maker/mikasabrat", async (req, res) => {
       lines = wrapText(ctx, text, maxWidth);
     }
 
-    const startY = image.height * 0.62 - ((lines.length - 1) * lineHeight) / 2;
+    const startY = image.height * 0.68 - ((lines.length - 1) * lineHeight) / 2;
 
     lines.forEach((line, i) => {
       ctx.save();
