@@ -61,7 +61,7 @@ app.get("/maker/mikasabrat", async (req, res) => {
     const rotasi = 0 * Math.PI / 180;
 
     // Skala font mengikuti ukuran asli gambar (referensi 1000px)
-    const scale = image.width / 1000;
+    const scale = image.width / 900;
 
     ctx.fillStyle = "#000";
     ctx.textAlign = "center";
